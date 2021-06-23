@@ -127,10 +127,14 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billField" destination="9u0-tu-edA" id="R0n-Sv-9n5"/>
+                        <outlet property="firstTotalLabel" destination="ZAJ-sB-HCm" id="BWC-HB-o7L"/>
                         <outlet property="fourthTotal" destination="Zkn-Fo-nsW" id="TgV-BX-9oj"/>
+                        <outlet property="fourthTotalLabel" destination="nNp-JU-Mw2" id="8WD-mN-8Fr"/>
                         <outlet property="halfTotal" destination="vLW-bl-TdN" id="eOS-0U-oFe"/>
                         <outlet property="labelsContainerView" destination="Ail-QP-zeZ" id="EvD-ee-O8P"/>
+                        <outlet property="secondTotalLabel" destination="c1c-xR-GMJ" id="bRT-Re-Hmh"/>
                         <outlet property="thirdTotal" destination="eoD-d3-RUe" id="l7U-zk-Qlc"/>
+                        <outlet property="thirdTotalLabel" destination="swE-TK-G8m" id="zcN-Pl-sHd"/>
                         <outlet property="tipLabel" destination="Jk7-NZ-cZ2" id="sdt-uo-2re"/>
                         <outlet property="tipPercentageControl" destination="hDa-KY-hfX" id="STF-4r-4J9"/>
                         <outlet property="totalLabel" destination="WXd-FY-QW1" id="cMh-e2-igb"/>

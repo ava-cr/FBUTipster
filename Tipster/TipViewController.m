@@ -16,6 +16,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *halfTotal;
 @property (weak, nonatomic) IBOutlet UILabel *thirdTotal;
 @property (weak, nonatomic) IBOutlet UILabel *fourthTotal;
+@property (weak, nonatomic) IBOutlet UILabel *firstTotalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *secondTotalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *thirdTotalLabel;
+@property (weak, nonatomic) IBOutlet UILabel *fourthTotalLabel;
 
 @end
 
@@ -49,6 +53,10 @@
         self.halfTotal.textColor = [UIColor darkGrayColor];
         self.thirdTotal.textColor = [UIColor darkGrayColor];
         self.fourthTotal.textColor = [UIColor darkGrayColor];
+        self.firstTotalLabel.textColor = [UIColor darkGrayColor];
+        self.secondTotalLabel.textColor = [UIColor darkGrayColor];
+        self.thirdTotalLabel.textColor = [UIColor darkGrayColor];
+        self.fourthTotalLabel.textColor = [UIColor darkGrayColor];
     }
     else {
         self.billField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"$" attributes:@{NSForegroundColorAttributeName: myYellow}];
@@ -61,6 +69,10 @@
         self.halfTotal.textColor = myYellow;
         self.thirdTotal.textColor = myYellow;
         self.fourthTotal.textColor = myYellow;
+        self.firstTotalLabel.textColor = myYellow;
+        self.secondTotalLabel.textColor = myYellow;
+        self.thirdTotalLabel.textColor = myYellow;
+        self.fourthTotalLabel.textColor = myYellow;
     }
 }
 
