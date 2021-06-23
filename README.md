@@ -23,7 +23,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] Dark/light mode available on the settings page.
-- [X] Improvement/personalization of the UI.
+- [X] Improvement and personalization of the UI.
 
 ## Video Walkthrough
 
