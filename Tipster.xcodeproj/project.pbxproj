@@ -16,6 +16,7 @@
 		463C9DF026826D11005DD95A /* TipsterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 463C9DEF26826D11005DD95A /* TipsterTests.m */; };
 		463C9DFB26826D11005DD95A /* TipsterUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 463C9DFA26826D11005DD95A /* TipsterUITests.m */; };
 		463C9E0A26827AD3005DD95A /* TipViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463C9E0926827AD3005DD95A /* TipViewController.m */; };
+		463C9E0D2682B0E1005DD95A /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 463C9E0C2682B0E1005DD95A /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		463C9DFC26826D11005DD95A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		463C9E0826827AD3005DD95A /* TipViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TipViewController.h; sourceTree = "<group>"; };
 		463C9E0926827AD3005DD95A /* TipViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TipViewController.m; sourceTree = "<group>"; };
+		463C9E0B2682B0E1005DD95A /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		463C9E0C2682B0E1005DD95A /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 		463C9DC726826D10005DD95A = {
 			isa = PBXGroup;
 			children = (
+				463C9E0B2682B0E1005DD95A /* SettingsViewController.h */,
+				463C9E0C2682B0E1005DD95A /* SettingsViewController.m */,
 				463C9DD226826D10005DD95A /* Tipster */,
 				463C9DEE26826D11005DD95A /* TipsterTests */,
 				463C9DF926826D11005DD95A /* TipsterUITests */,
@@ -268,6 +273,7 @@
 			files = (
 				463C9DD526826D10005DD95A /* AppDelegate.m in Sources */,
 				463C9DE626826D11005DD95A /* main.m in Sources */,
+				463C9E0D2682B0E1005DD95A /* SettingsViewController.m in Sources */,
 				463C9E0A26827AD3005DD95A /* TipViewController.m in Sources */,
 				463C9DD826826D10005DD95A /* SceneDelegate.m in Sources */,
 			);
