@@ -13,6 +13,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *tipPercentageControl;
 @property (weak, nonatomic) IBOutlet UIView *labelsContainerView;
+@property (weak, nonatomic) IBOutlet UILabel *halfTotal;
+@property (weak, nonatomic) IBOutlet UILabel *thirdTotal;
+@property (weak, nonatomic) IBOutlet UILabel *fourthTotal;
 
 @end
 
@@ -28,6 +31,37 @@
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSInteger index = [defaults integerForKey:@"default_tip"];
     self.tipPercentageControl.selectedSegmentIndex = index;
+    
+    
+    NSInteger themeIndex = [defaults integerForKey:@"default_theme"];
+    
+    UIColor *myYellow = [UIColor colorWithRed:1.0 green:252/255.0 blue:204/255.0 alpha:1.0];
+    
+    if(themeIndex == 0) { // light theme
+        self.view.backgroundColor = myYellow;
+        
+        self.billField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"$" attributes:@{NSForegroundColorAttributeName: [UIColor grayColor]}];
+        self.labelsContainerView.backgroundColor = myYellow;
+        self.tipPercentageControl.backgroundColor = myYellow;
+        self.billField.textColor = [UIColor darkGrayColor];
+        self.tipLabel.textColor = [UIColor darkGrayColor];
+        self.totalLabel.textColor = [UIColor darkGrayColor];
+        self.halfTotal.textColor = [UIColor darkGrayColor];
+        self.thirdTotal.textColor = [UIColor darkGrayColor];
+        self.fourthTotal.textColor = [UIColor darkGrayColor];
+    }
+    else {
+        self.billField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"$" attributes:@{NSForegroundColorAttributeName: myYellow}];
+        self.view.backgroundColor = [UIColor darkGrayColor];
+        self.labelsContainerView.backgroundColor = [UIColor darkGrayColor];
+        self.tipPercentageControl.backgroundColor = [UIColor lightGrayColor];
+        self.billField.textColor = myYellow;
+        self.tipLabel.textColor = myYellow;
+        self.totalLabel.textColor = myYellow;
+        self.halfTotal.textColor = myYellow;
+        self.thirdTotal.textColor = myYellow;
+        self.fourthTotal.textColor = myYellow;
+    }
 }
 
 - (IBAction)onTap:(id)sender {
@@ -55,6 +89,11 @@
     
     self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
     self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
+    
+// add individual totals for groups
+    self.halfTotal.text = [NSString stringWithFormat:@"$%.2f", total/2];
+    self.thirdTotal.text = [NSString stringWithFormat:@"$%.2f", total/3];
+    self.fourthTotal.text = [NSString stringWithFormat:@"$%.2f", total/4];
 }
 
 - (void)hideLabels {
