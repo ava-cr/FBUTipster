@@ -23,6 +23,7 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] Dark/light mode available on the settings page.
+- [X] Improvement/personalization of the UI.
 
 ## Video Walkthrough
 
@@ -35,11 +36,11 @@ GIF created with [Kap](https://getkap.co/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I encountered challenges with saving user data on my settings page and having it appear when I returned from editing settings. I also encountered challenges with constraints which I incorporated into my settings page and with changing the color of the placeholder text in dark mode. I worked through these challenges by using the Apple Developer Docs, Stack Overflow, and asking a TA to clarify constraints for me.
 
 ## Credits
 
-List an 3rd party libraries, icons, graphics, or other assets you used in your app.
+List an 3rd party libraries, icons, graphics, or other assets you used in your app: None.
 
 - [AFNetworking](https://github.com/AFNetworking/AFNetworking) - networking task library
 
