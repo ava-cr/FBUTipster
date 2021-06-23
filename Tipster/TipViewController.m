@@ -36,6 +36,20 @@
     NSInteger index = [defaults integerForKey:@"default_tip"];
     self.tipPercentageControl.selectedSegmentIndex = index;
     
+    // update tips
+    double tipPercentages[] = {0.15, 0.2, 0.25};
+    double tipPercentage = tipPercentages[self.tipPercentageControl.selectedSegmentIndex];
+    
+    double bill = [self.billField.text doubleValue];
+    double tip = bill * tipPercentage;
+    double total = bill + tip;
+    
+    self.tipLabel.text = [NSString stringWithFormat:@"$%.2f", tip];
+    self.totalLabel.text = [NSString stringWithFormat:@"$%.2f", total];
+    self.halfTotal.text = [NSString stringWithFormat:@"$%.2f", total/2];
+    self.thirdTotal.text = [NSString stringWithFormat:@"$%.2f", total/3];
+    self.fourthTotal.text = [NSString stringWithFormat:@"$%.2f", total/4];
+    
     
     NSInteger themeIndex = [defaults integerForKey:@"default_theme"];
     
@@ -79,14 +93,13 @@
 - (IBAction)onTap:(id)sender {
     
     [self.view endEditing:true];
-    [self showLabels];
+   // [self showLabels];
 }
 - (IBAction)updateLabels:(id)sender {
     if (self.billField.text.length == 0) {
         [self hideLabels];
     }
     else {
-        NSLog(@"show labels");
         [self showLabels];
         
     }
@@ -114,14 +127,7 @@
         billFrame.origin.y += 200;
         
         self.billField.frame = billFrame;
-        
-//        CGRect labelsFrame = self.labelsContainerView.frame;
-//        labelsFrame.origin.y += 200;
-//        self.labelsContainerView.frame = labelsFrame;
-        
         self.labelsContainerView.hidden = true;
-        
-//        self.labelsContainerView.alpha = 0;
     }];
 }
 
@@ -137,8 +143,6 @@
         self.labelsContainerView.frame = labelsFrame;
         
         self.labelsContainerView.hidden = false;
-        
-//        self.labelsContainerView.alpha = 1;
     }];
 }
 

@@ -21,13 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    /*
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSInteger tipIndex = [defaults integerForKey:@"default_tip"];
-    self.defaultTipControl.selectedSegmentIndex = tipIndex;
-     */
 }
 
 
@@ -49,7 +42,7 @@
         self.themeLabel.textColor = [UIColor darkGrayColor];
     }
     else {
-        self.view.backgroundColor = [UIColor grayColor];
+        self.view.backgroundColor = [UIColor darkGrayColor];
         self.defaultTipControl.backgroundColor = [UIColor lightGrayColor];
         self.themeControl.backgroundColor = myYellow;
         self.settingsLabel.textColor = myYellow;
@@ -102,8 +95,6 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    
-    
     
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
